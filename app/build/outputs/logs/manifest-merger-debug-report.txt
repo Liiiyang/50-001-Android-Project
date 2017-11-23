@@ -1,0 +1,158 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:2:1-56:12
+	package
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:3:5-51
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:11:5-80
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:11:22-78
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:12:5-66
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Li Yang\.android\build-cache\8ffb6fa41af25e3ce2b156890f237bfa746e9f3c\output\AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:12:22-64
+application
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:14:5-54:19
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\Li Yang\.android\build-cache\d953c679e8dd2eebc27e948371f2aa66d6c28c1f\output\AndroidManifest.xml:18:5-19
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Li Yang\.android\build-cache\8ffb6fa41af25e3ce2b156890f237bfa746e9f3c\output\AndroidManifest.xml:24:5-19
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Li Yang\.android\build-cache\1203ae4723ed808af538a81e8f5e17dbe4f57a0e\output\AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Li Yang\.android\build-cache\b946a2a746182f844c104fe15a59660378eda63f\output\AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\691fa8aa2e0ec9c4640130281fe01a378b71ed72\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\2c98dbc2832a5afb0cadbd5543cccbc234e0d988\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\61100e52294e39047605b85c6bc5fa7f020dc3d6\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\6feace8e31aa39e4c144bd707d999e9e7fb6d9af\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\d51466230c6f148dc75c36bfac768461239e3a0f\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\4d84a4f97d5a0df881b31c60664f28352b6d61fc\output\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\91a84f7727ead3203a6ab199469f511531ae2055\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\c2cfb9b14c394c5b46b60d82e3d5f9a0262ab20c\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\375935123f1ad3ad22b64d36d05714f98aef4245\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\32f336784f2a287bdc403ab20b2c10fac8e1ab86\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\45cd5a37875911208fe6b92e2ebfb6495409e1a2\output\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\3ca48e6da4b96c7ba586a0397e261a9e7a0beb66\output\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:17:9-41
+	android:supportsRtl
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:19:9-35
+	android:roundIcon
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:18:9-54
+	android:allowBackup
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:15:9-35
+	android:icon
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:16:9-43
+	android:theme
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:20:9-40
+meta-data#com.google.android.geo.API_KEY
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:30:9-32:54
+	android:value
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:32:13-52
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:31:13-58
+meta-data#com.google.android.gms.version
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:33:9-35:69
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Li Yang\.android\build-cache\b946a2a746182f844c104fe15a59660378eda63f\output\AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:35:13-66
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:34:13-58
+uses-feature#0x00020000
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:37:9-39:38
+	android:glEsVersion
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:38:13-45
+	android:required
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:39:13-36
+activity#com.example.liyang.androidtouristapp.MapsActivity
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:41:9-49:20
+	android:label
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:43:13-56
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:42:13-41
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:44:13-48:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:45:17-69
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:45:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:47:17-77
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:47:27-74
+activity#com.example.liyang.androidtouristapp.AttractionSelection
+ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:50:9-53:20
+	android:label
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:51:13-47
+	android:name
+		ADDED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml:50:19-53
+uses-sdk
+INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.gms:play-services-places:11.0.4] C:\Users\Li Yang\.android\build-cache\d953c679e8dd2eebc27e948371f2aa66d6c28c1f\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Li Yang\.android\build-cache\8ffb6fa41af25e3ce2b156890f237bfa746e9f3c\output\AndroidManifest.xml:23:5-43
+MERGED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.0.4] C:\Users\Li Yang\.android\build-cache\1203ae4723ed808af538a81e8f5e17dbe4f57a0e\output\AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.0.4] C:\Users\Li Yang\.android\build-cache\b946a2a746182f844c104fe15a59660378eda63f\output\AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\691fa8aa2e0ec9c4640130281fe01a378b71ed72\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\2c98dbc2832a5afb0cadbd5543cccbc234e0d988\output\AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\61100e52294e39047605b85c6bc5fa7f020dc3d6\output\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\6feace8e31aa39e4c144bd707d999e9e7fb6d9af\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\d51466230c6f148dc75c36bfac768461239e3a0f\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\b57c7049b6f54111dfd0be7bdcab0a868407cedf\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\4d84a4f97d5a0df881b31c60664f28352b6d61fc\output\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\91a84f7727ead3203a6ab199469f511531ae2055\output\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\c2cfb9b14c394c5b46b60d82e3d5f9a0262ab20c\output\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\375935123f1ad3ad22b64d36d05714f98aef4245\output\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\32f336784f2a287bdc403ab20b2c10fac8e1ab86\output\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\45cd5a37875911208fe6b92e2ebfb6495409e1a2\output\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\3ca48e6da4b96c7ba586a0397e261a9e7a0beb66\output\AndroidManifest.xml:21:5-23:58
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\2c98dbc2832a5afb0cadbd5543cccbc234e0d988\output\AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Li Yang\AndroidStudioProjects\AndroidTouristApp\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Li Yang\.android\build-cache\8ffb6fa41af25e3ce2b156890f237bfa746e9f3c\output\AndroidManifest.xml:19:5-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:11.0.4] C:\Users\Li Yang\.android\build-cache\8ffb6fa41af25e3ce2b156890f237bfa746e9f3c\output\AndroidManifest.xml:19:22-76
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.0.4] C:\Users\Li Yang\.android\build-cache\9a3c79e8edd40a9532e28018e4305de73755757b\output\AndroidManifest.xml:19:19-85
+meta-data#android.support.VERSION
+ADDED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\691fa8aa2e0ec9c4640130281fe01a378b71ed72\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:design:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\2c98dbc2832a5afb0cadbd5543cccbc234e0d988\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\61100e52294e39047605b85c6bc5fa7f020dc3d6\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\6feace8e31aa39e4c144bd707d999e9e7fb6d9af\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\d51466230c6f148dc75c36bfac768461239e3a0f\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\b57c7049b6f54111dfd0be7bdcab0a868407cedf\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\4d84a4f97d5a0df881b31c60664f28352b6d61fc\output\AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\91a84f7727ead3203a6ab199469f511531ae2055\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\c2cfb9b14c394c5b46b60d82e3d5f9a0262ab20c\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\375935123f1ad3ad22b64d36d05714f98aef4245\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\32f336784f2a287bdc403ab20b2c10fac8e1ab86\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\45cd5a37875911208fe6b92e2ebfb6495409e1a2\output\AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\3ca48e6da4b96c7ba586a0397e261a9e7a0beb66\output\AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\691fa8aa2e0ec9c4640130281fe01a378b71ed72\output\AndroidManifest.xml:24:9-38
+	android:name
+		ADDED from [com.android.support:cardview-v7:26.0.0-alpha1] C:\Users\Li Yang\.android\build-cache\691fa8aa2e0ec9c4640130281fe01a378b71ed72\output\AndroidManifest.xml:23:9-47
