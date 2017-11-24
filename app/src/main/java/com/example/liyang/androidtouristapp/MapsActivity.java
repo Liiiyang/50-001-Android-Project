@@ -68,8 +68,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     }
 
     public void Second_Page(View view){
-        Intent AttractionSelect = new Intent(this, AttractionSelection.class);
-        startActivity(AttractionSelect);
+        Intent RecyclerAttraction = new Intent(this, RecyclerAttraction.class);
+        startActivity(RecyclerAttraction);
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {

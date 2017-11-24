@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"/>
 
 
         <TextView
@@ -31,7 +31,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/restaurant_address_textview"
+            android:id="@+id/attraction_address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="4dp"
@@ -41,15 +41,6 @@
             android:text="Some address placeholder"
             android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/cost_for_two_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:text="Average cost for 2: "
-            android:textSize="14sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -77,43 +68,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <Button
-            android:id="@+id/go_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="11dp"
-            android:background="@mipmap/go"
-            android:onClick="attractionselect"
-            android:padding="15dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toLeftOf="@+id/constraintselect"
-            android:layout_toStartOf="@+id/constraintselect" />
-
-        <TextView
-            android:id="@+id/constraintselect"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/go_button"
-            android:layout_alignBottom="@+id/go_button"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="12dp"
-            android:layout_marginRight="12dp"
-            android:text="Select Constraints"
-            android:textSize="20sp" />
+        android:layout_height="315dp">
 
         <CheckBox
             android:id="@+id/checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/go_button"
-            android:layout_alignEnd="@+id/constraintselect"
-            android:layout_alignRight="@+id/constraintselect"
-            android:layout_marginBottom="115dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginRight="10dp"
-            android:onClick="confirm_attraction"/>
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="21dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginRight="19dp"/>
     </RelativeLayout>
 </android.support.v7.widget.CardView>
+
