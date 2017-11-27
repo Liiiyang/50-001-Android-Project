@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Select Attractions</string>
-    <string name="title_activity_maps">Select Start Location</string>
-    <string name="select_start_location">Select Start Location</string>
-    <string name="go">Go</string>
-    <string name="click_me">click me</string>
-</resources>
