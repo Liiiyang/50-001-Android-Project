@@ -3,6 +3,7 @@ package com.example.liyang.androidtouristapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class AttractionSelection extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_attraction_selection);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.setTitle("Select Your Budget");
         final TextView text = (TextView) findViewById(R.id.calculate);
         final Button calroute = (Button) findViewById(R.id.go_button);
@@ -35,6 +37,19 @@ public class AttractionSelection extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        //handle presses on the action bar items
+        switch (item.getItemId()) {
+
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+                }
+        return super.onOptionsItemSelected(item);
     }
 
     public void showroute(View view){

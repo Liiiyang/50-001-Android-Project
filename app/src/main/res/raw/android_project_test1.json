@@ -7,6 +7,8 @@
   "bus":["GBB","1","FCP","3","MBS","4"],
   "taxi":["GBB","1","FCP","3","MBS","4"],
   "address":"2 Jurong Hill, 628925",
+  "adultfee": "$29",
+  "childfee": "$19",
   "photo": "jbp"
 },{"id":"02",
     "name":"Fort Canning Park",
@@ -17,6 +19,8 @@
     "bus":["GBB","1","FCP","3","MBS","4"],
     "taxi":["GBB","1","FCP","3","MBS","4"],
     "address":"River Valley Rd, 179037",
+    "adultfee": "free",
+    "childfee": "free",
     "photo": "fcp"
   },
   {"id":"03",
@@ -28,5 +32,7 @@
   "bus":["GBB","1","FCP","3","MBS","4"],
   "taxi":["GBB","1","FCP","3","MBS","4"],
   "address":"18 Marina Gardens Dr, Singapore 018953",
+  "adultfee": "Free Entrance, Attraction Fees Apply",
+  "childfee": "Free Entrance, Attraction Fees Apply",
   "photo": "gbb"
   }]

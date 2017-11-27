@@ -45,6 +45,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     public class AttractionViewHolder extends RecyclerView.ViewHolder {
         private TextView attractionName;
         private TextView attractionaddress;
+        private TextView attractionadultfee;
+        private TextView attractionchildfee;
         private ImageView attractionImage;
         CheckBox checkBox;
 
@@ -53,6 +55,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             attractionImage = (ImageView) view.findViewById(R.id.imageview_attraction);
             attractionName = (TextView) view.findViewById(R.id.attraction_name);
             attractionaddress = (TextView) view.findViewById(R.id.attraction_address);
+            attractionadultfee = (TextView) view.findViewById(R.id.attraction_adultfee);
+            attractionchildfee = (TextView) view.findViewById(R.id.attraction_childfee);
             checkBox = (CheckBox) view.findViewById(R.id.checkbox);
         }
     }
@@ -105,6 +109,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                 attractionHolder.attractionImage.setImageResource(imageResID);
                 attractionHolder.attractionName.setText(attractionitem.getName());
                 attractionHolder.attractionaddress.setText(attractionitem.getAddress());
+                attractionHolder.attractionadultfee.setText(attractionitem.getAdultfee());
+                attractionHolder.attractionchildfee.setText(attractionitem.getChildfee());
 
                 //Implementing CheckBox to create Nodes for Algorithm
                 attractionHolder.checkBox.setOnCheckedChangeListener(null);

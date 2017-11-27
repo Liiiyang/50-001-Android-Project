@@ -10,9 +10,9 @@
         android:text="Select Your Budget"
         android:textSize="20sp"
         android:gravity="center"
+        android:layout_marginTop="32dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp" />
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/price"
@@ -44,9 +44,10 @@
         android:layout_height="90dp"
         android:weightSum="1"
         android:id="@+id/radioGroup"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/entercost"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="14dp">
 
         <RadioButton
             android:layout_width="wrap_content"
@@ -73,10 +74,10 @@
         android:background="@mipmap/go"
         android:onClick="cal_route"
         android:padding="15dp"
-        android:layout_marginBottom="13dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/radioGroup"
         android:layout_toLeftOf="@+id/calculate"
-        android:layout_toStartOf="@+id/calculate"/>
+        android:layout_toStartOf="@+id/calculate"
+        android:layout_marginTop="23dp" />
 
     <TextView
         android:id="@+id/calculate"
@@ -90,30 +91,4 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="12dp"
         android:layout_marginEnd="12dp" />
-
-    <Button
-        android:id="@+id/back_button"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@mipmap/back"
-        android:onClick="Back"
-        android:padding="15dp"
-        android:layout_alignBaseline="@+id/back"
-        android:layout_alignBottom="@+id/back"
-        android:layout_alignLeft="@+id/price"
-        android:layout_alignStart="@+id/price" />
-
-    <TextView
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Back"
-        android:textSize="20sp"
-        android:layout_marginTop="12dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/back_button"
-        android:layout_toEndOf="@+id/back_button"
-        android:layout_marginLeft="10dp"
-        android:layout_marginStart="10dp" />
-
 </RelativeLayout>
