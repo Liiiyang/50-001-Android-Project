@@ -32,6 +32,8 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     // The list of Attractions
     private final ArrayList<Pojo> mRecyclerViewItems;
 
+    //Take note on how many checkbox is checked
+    public static int count = 0;
 
     public RecyclerViewAdapter(Context context, ArrayList<Pojo> recyclerViewItems) {
         this.mContext = context;
@@ -97,7 +99,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
             case ATTRACTION_VIEW_TYPE:
             default:
                 final AttractionViewHolder attractionHolder = (AttractionViewHolder) holder;
-                Pojo attractionitem = (Pojo) mRecyclerViewItems.get(position);
+                final Pojo attractionitem = (Pojo) mRecyclerViewItems.get(position);
 
                 // Get the attraction item image resource ID.
                 String imageName = attractionitem.getImageName();
@@ -121,6 +123,7 @@ class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
                     @Override
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         mRecyclerViewItems.get(attractionHolder.getAdapterPosition()).setSelected(isChecked);
+                        count++;
                     }
                 });
         }

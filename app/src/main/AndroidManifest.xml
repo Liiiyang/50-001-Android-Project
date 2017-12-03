@@ -55,6 +55,9 @@
             android:name="RecyclerAttraction"
             android:label="Select Attractions">
         </activity>
+        <activity
+            android:name=".ShowRoute">
+        </activity>
 
     </application>
 

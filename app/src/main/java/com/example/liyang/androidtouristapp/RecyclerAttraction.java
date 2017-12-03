@@ -1,9 +1,7 @@
 package com.example.liyang.androidtouristapp;
 
-import android.app.ActionBar;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -31,7 +29,8 @@ import java.util.HashMap;
 public class RecyclerAttraction extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private ArrayList<Pojo> mRecyclerViewItems = new ArrayList<>();
-
+    public static ArrayList<Pojo> nodesChosen= new ArrayList<>();
+    Pojo hotel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +55,6 @@ public class RecyclerAttraction extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         //handle presses on the action bar items
         switch (item.getItemId()) {
 
@@ -65,44 +63,23 @@ public class RecyclerAttraction extends AppCompatActivity {
                 return true;
 
             case R.id.selectconstraints:
+                //TODO Kenny:change to brian codes
                 // adding nodes to graphs that are checked.
-                Graph walkGraph = new Graph();
-                Graph busGraph = new Graph();
-                Graph taxiGraph = new Graph();
+                // passing array list of checked pojo to next page
+                nodesChosen.add(hotel);
                 for (Pojo x : mRecyclerViewItems) {
                     if (x.isSelected()) {
-                        Toast.makeText(this, x.getName(), Toast.LENGTH_SHORT).show();
-                        walkGraph.addNodes(x);
-                        busGraph.addNodes(x);
-                        taxiGraph.addNodes(x);
+                        nodesChosen.add(x);
                     }
                 }
-                //adding edges and weigth to walk,bus and taxi graphs
-                for (Pojo x : walkGraph.nodes) {
-                    for (Pojo y : walkGraph.nodes) {
-                        for (String z : x.walk.keySet())
-                            if (z.equals(y.getId())) {
-                                walkGraph.addEdge(x, y, x.walk.get(z));
-                            }
-                    }
-                }
-                for (Pojo x : busGraph.nodes) {
-                    for (Pojo y : busGraph.nodes) {
-                        for (String z : x.bus.keySet())
-                            if (z.equals(y.getId())) {
-                                busGraph.addEdge(x, y, x.bus.get(z));
-                            }
-                    }
-                }
-                for (Pojo x : taxiGraph.nodes) {
-                    for (Pojo y : taxiGraph.nodes) {
-                        for (String z : x.taxi.keySet())
-                            if (z.equals(y.getId())) {
-                                taxiGraph.addEdge(x, y, x.taxi.get(z));
-                            }
-                    }
-                }
-                startActivity(new Intent(this, AttractionSelection.class));
+                Intent attractionSelectionPage = new Intent(this, AttractionSelection.class);
+                //TODO Kenny:need to PojoArraylist nodesChosen over to next intent
+                Bundle bundle = new Bundle();
+                bundle.putParcelableArrayList("Birds", nodesChosen);
+                attractionSelectionPage.putExtras(bundle);
+
+                startActivity(attractionSelectionPage);
+                //Need to use this function for next page ArrayList<Pojo> result = greedy_solver(testCase1,"walk");
                 return true;
         }
         return super.onOptionsItemSelected(item);}
@@ -118,17 +95,20 @@ public class RecyclerAttraction extends AppCompatActivity {
 
                 String attractionid = attractionObject.getString("id");
                 String attractionName = attractionObject.getString("name");
-                String attractionlocation = attractionObject.getString("location");
-                //String attractionroute = attractionObject.getString("route");
+                String attractionlongitude = attractionObject.getString("longitude");
+                String attractionlatitude = attractionObject.getString("latitude");
                 String attractionaddress = attractionObject.getString("address");
                 String attractionadultfee = attractionObject.getString("adultfee");
                 String attractionchildfee = attractionObject.getString("childfee");
                 String attractionImageName = attractionObject.getString("photo");
+                String attractionSnippet = attractionObject.getString("snippet");
 
-                //extract json bus,walk and taxi edge and weight
+                //extract json bus,walk and taxi edge and weight + bus price and taxi price
                 HashMap<String,Integer> walkEdgeList=new HashMap<>();
                 HashMap<String,Integer> busEdgeList=new HashMap<>();
                 HashMap<String,Integer> taxiEdgeList=new HashMap<>();
+                HashMap<String,Integer> taxiPrice=new HashMap<>();
+                HashMap<String,Integer> busPrice=new HashMap<>();
 
                 JSONArray tempWalk = attractionObject.getJSONArray("walk");
                 int lengthW = tempWalk.length();
@@ -152,9 +132,28 @@ public class RecyclerAttraction extends AppCompatActivity {
                         taxiEdgeList.put(tempTaxi.getString(j),tempTaxi.getInt(j+1));
                     }
                 }
-                Pojo pojo = new Pojo(attractionid,attractionName, attractionlocation,attractionaddress,attractionadultfee,
-                        attractionchildfee,attractionImageName,walkEdgeList,busEdgeList,taxiEdgeList);
-                mRecyclerViewItems.add(pojo);
+                JSONArray tempTaxiPrice = attractionObject.getJSONArray("taxiprice");
+                int lengthTP = tempTaxiPrice.length();
+                if (lengthTP > 0) {
+                    for (int j = 0; j < lengthTP; j=j+2) {
+                        taxiPrice.put(tempTaxiPrice.getString(j),tempTaxiPrice.getInt(j+1));
+                    }
+                }
+                JSONArray tempBusPrice = attractionObject.getJSONArray("busprice");
+                int lengthBP = tempBusPrice.length();
+                if (lengthBP > 0) {
+                    for (int j = 0; j < lengthBP; j=j+2) {
+                        busPrice.put(tempBusPrice.getString(j),tempBusPrice.getInt(j+1));
+                    }
+                }
+                //Toast.makeText(getApplicationContext(), busPrice.get("GBB").toString(), Toast.LENGTH_SHORT).show(); //debug
+                Pojo pojo = new Pojo(attractionid,attractionName,attractionlatitude, attractionlongitude,attractionaddress,attractionadultfee,
+                        attractionchildfee,attractionImageName,attractionSnippet,walkEdgeList,busEdgeList,taxiEdgeList,busPrice,taxiPrice);
+                //TODO Kenny Added to prevent hotel from being added
+                if(!pojo.getId().equals("HOTEL")){
+                mRecyclerViewItems.add(pojo);}
+                else{hotel=pojo;// store in global variable so we can access when button pressed (onOption Item select)
+                }
             }
         } catch (IOException | JSONException exception) {
             Log.e(RecyclerAttraction.class.getName(), "Unable to parse JSON file.", exception);
