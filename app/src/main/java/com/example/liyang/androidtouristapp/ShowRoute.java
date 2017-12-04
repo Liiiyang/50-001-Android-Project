@@ -72,12 +72,14 @@ public class ShowRoute extends FragmentActivity implements OnMapReadyCallback{
         String urlTopass;
         Pojo currentx = null;
         int counter = 0;
+        //Create a Route from the last attraction back to the hotel
         LatLng first = new LatLng(Double.parseDouble(RecyclerAttraction.nodesChosen.get(0).getLatitude()), Double.parseDouble(RecyclerAttraction.nodesChosen.get(0).getLongitude()));
         LatLng last = new LatLng(Double.parseDouble(RecyclerAttraction.nodesChosen.get(RecyclerAttraction.nodesChosen.size()-1).getLatitude()), Double.parseDouble(RecyclerAttraction.nodesChosen.get(RecyclerAttraction.nodesChosen.size()-1).getLongitude()));
         String newurlTopass = makeURL(first.latitude,
                 first.longitude, last.latitude,
                 last.longitude);
         new connectAsyncTask(newurlTopass).execute();
+        //Create Route for the rest of the attractions
         for(Pojo x: RecyclerAttraction.nodesChosen){
             if(currentx==null){
                 currentx = x;
@@ -89,17 +91,20 @@ public class ShowRoute extends FragmentActivity implements OnMapReadyCallback{
                     startLatLng.longitude, endLatLng.latitude,
                     endLatLng.longitude);
             new connectAsyncTask(urlTopass).execute();
-            if(counter == 0){
-                myMap.addMarker(new MarkerOptions().position(startLatLng).title("Start Location / End Location"));
-                counter++;
-            }
-            else{
-                marker = myMap.addMarker(new MarkerOptions().position(startLatLng).title("Location :" + currentx.getName()).snippet(currentx.getSnippet()));
-                marker = myMap.addMarker(new MarkerOptions().position(endLatLng).title("Location :" + x.getName()).snippet(x.getSnippet()));
-                counter++;
-            }
+
             currentx = x;
             }
+            //Add Markers
+        for(int i=0;i<RecyclerAttraction.nodesChosen.size();i++){
+            LatLng attractions = new LatLng(Double.parseDouble(RecyclerAttraction.nodesChosen.get(i).getLatitude()), Double.parseDouble(RecyclerAttraction.nodesChosen.get(i).getLongitude()));
+            if(i == 0){
+                marker = myMap.addMarker(new MarkerOptions().position(first).title("Start Location / End Location"));
+            }
+            else{
+                marker = myMap.addMarker(new MarkerOptions().position(attractions).title("Location " + i + " :" + RecyclerAttraction.nodesChosen.get(i).getName()).snippet(RecyclerAttraction.nodesChosen.get(i).getSnippet()));
+            }
+
+        }
         // Add a marker in Singapore and move the camera
         LatLng singapore = new LatLng(1.2839, 103.8609);
         float zoomLevel = 10.0f;
